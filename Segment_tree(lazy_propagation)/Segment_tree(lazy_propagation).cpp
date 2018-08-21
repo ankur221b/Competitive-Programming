@@ -59,8 +59,8 @@ void update(int start, int end, int node, int l, int r, int val)
 	
 		if(start!=end) // if current node is not leaf node
 		{
-            lazy[2*node]+=val;
-            lazy[2*node+1]+=val;
+                    lazy[2*node]+=val;
+                    lazy[2*node+1]+=val;
 		}
 
 		lazy[node]=0;
