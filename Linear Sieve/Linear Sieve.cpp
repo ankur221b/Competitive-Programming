@@ -13,7 +13,9 @@ bool prime[MAX];
 
 void get_sieve()
 {
-    for(int i=1;i<MAX;i++)
+    prime[1]=false;
+    
+    for(int i=2;i<=MAX;i++)
     {
         prime[i]=true;
     }
