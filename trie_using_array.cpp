@@ -47,6 +47,23 @@ void insert(string s, node* root,int& c)
   tmp->is_end = true;
 }
 
+bool search(string s, node* root)
+{
+    node* tmp = root;
+
+    for(int i=0;i<s.length();i++)
+    {
+        int index = s[i]-'A';
+  
+        if(!tmp->child[index])return 0;
+         
+        tmp = tmp->child[index];
+
+        
+    }
+    return (tmp !=NULL && tmp->is_end);
+}
+
 
 
 int main()
