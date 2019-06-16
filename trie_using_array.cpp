@@ -16,9 +16,7 @@ using namespace std;
 struct node
 {
   bool is_end;
-  string element;
-    int from,to;
-    node* child[26];
+  node* child[26];
 };
 
 node* get_node()
@@ -41,11 +39,7 @@ void insert(string s, node* root,int& c)
         {
             int from_tmp = tmp->to;
             tmp->child[index] = get_node();
-            tmp->child[index]->from = from_tmp;
-            tmp->child[index]->to = c+1;
-            tmp->child[index]->element = s[i];
             c++;
-            cout<<tmp->child[index]->from<<"->"<<tmp->child[index]->to<<":"<<tmp->child[index]->element<<endl;
         }
         tmp = tmp->child[index];
 
@@ -58,22 +52,8 @@ void insert(string s, node* root,int& c)
 int main()
 { 
     node* root = get_node();
-    root->from = 0;
-    root->to = 0;
 
 
-    int n,c=0;
-    cin>>n;
-    string s;
-
-    for(int i=0;i<n;i++)
-    {
-        cin>>s;
-        insert(s,root,c);
-    }
-    
-
-    
 
   
     return 0;
