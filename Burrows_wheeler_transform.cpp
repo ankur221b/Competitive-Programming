@@ -37,13 +37,6 @@ int main()
     for(int i=0;i<vv.size();i++)
     {
     	cout<<vv[i][n-1];
-    }
-
-
- 
-
-
-
-    
+    }    
   
 }
