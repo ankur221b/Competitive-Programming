@@ -1,3 +1,5 @@
+# time complexity O(E.V)
+
 #include<bits/stdc++.h> 
 using namespace std;
 
