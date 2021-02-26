@@ -24,7 +24,7 @@ ll mod_pow(ll a, ll b)
         b >>= 1;
         a = (a * a) % MOD;
     }
-    return ans;
+    return ans % MOD;
 }
 
 void init(ll n)
@@ -45,7 +45,7 @@ ll npr(int n, int m)
 
 ll ncr(int n, int m)
 {
-    return (fact[n] * inv[m] * inv[n - m]) % MOD;
+    return ( (fact[n] * inv[m]) % MOD * inv[n - m]) % MOD;
 }
 
 int main()

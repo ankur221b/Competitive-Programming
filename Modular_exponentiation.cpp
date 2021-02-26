@@ -21,7 +21,7 @@ ll mod_pow(ll a, ll b)
 		b >>= 1;
 		a = (a * a) % MOD;
 	}
-	return ans;
+	return ans % MOD;
 }
 
 int main()
